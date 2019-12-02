@@ -1,0 +1,60 @@
+barcelona.jpg
+Barcelona
+europe, spain
+beijing.jpg
+Beijing
+asia, china
+cairo.jpg
+Cairo
+africa, egypt
+havana.jpg
+Havana
+northamerica, cuba
+honolulu.jpg
+Honolulu
+northamerica, hawaii
+johannesburg.jpg
+Johannesburg
+africa, southafricanrepublic
+lasvegas.jpg
+Las Vegas
+northamerica, usa
+london.jpg
+London
+europe, england
+madagascar.jpg
+Madagascar
+africa, madagascar
+moscow.jpg
+Moscow
+europe, russia
+mumbai.jpg
+Mumbai
+asia, india
+newyork.jpg
+New York
+northamerica, usa
+niagara.jpg
+Niagara Falls
+northamerica, usa, canada
+paris.jpg
+Paris
+europe, france
+rio.jpg
+Rio de Janeiro
+southamerica, brasil
+split.jpg
+Split
+europe, croatia
+sydney.jpg
+Sydney
+australia
+tokyo.jpg
+Tokyo
+asia, japan
+zadar.jpg
+Zadar
+europe, croatia
+zagreb.jpg
+Zagreb
+europe, croatia

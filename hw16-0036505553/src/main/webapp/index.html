@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<meta charset="UTF-8">
+<title>Galerija</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/htmlescaping.js"></script>
+<script type="text/javascript"><!--
+
+	
+
+	function getPicture(name) {
+		var xmlhttp;
+
+		if (window.XMLHttpRequest) {
+			// code for IE7+, Firefox, Chrome, Opera, Safari
+			xmlhttp = new XMLHttpRequest();
+		} else {
+			// code for IE6, IE5
+			xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		
+		xmlhttp.onreadystatechange = function() {
+			if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+				var text = xmlhttp.responseText;
+				var photo = JSON.parse(text);
+				var html = "";
+				var html2 = "";
+				html += '<br>';
+				var url = "servlets/loadPicture?name="+name;
+				html += '<img class="img2" src="'+url+'"/>';
+				html2 += '<br><br><h2>'+photo.title+'</h2>'+ '<br>'+photo.tags;
+				
+				document.getElementById("picture").innerHTML = html;
+				document.getElementById("description").innerHTML = html2;
+			}
+		}
+
+		xmlhttp.open("GET", "rest/gallery/getPhotoInfo/"+name, true);
+		xmlhttp.send();
+	}
+
+	function getThumbs(tag) {
+
+		var xmlhttp;
+
+		if (window.XMLHttpRequest) {
+			// code for IE7+, Firefox, Chrome, Opera, Safari
+			xmlhttp = new XMLHttpRequest();
+		} else {
+			// code for IE6, IE5
+			xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+
+		xmlhttp.onreadystatechange = function() {
+			if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+				var text = xmlhttp.responseText;
+				var thumbs = JSON.parse(text);
+				var html = "";
+				for (var i = 0; i < thumbs.length; i++) {
+					var url = "servlets/getThumb?name=" + thumbs[i].fileName;
+					html += '<img class="thumbnail1" src="' + url
+							+ '" onClick="getPicture(\'' + thumbs[i].fileName
+							+ '\')"/>';
+						
+				}
+				document.getElementById("thumbnail").innerHTML = html;
+			}
+
+		}
+
+		xmlhttp.open("GET", "rest/gallery/thumbs/" + tag, true);
+		xmlhttp.send();
+
+	}
+
+	function getTags() {
+		var xmlhttp;
+
+		if (window.XMLHttpRequest) {
+			// code for IE7+, Firefox, Chrome, Opera, Safari
+			xmlhttp = new XMLHttpRequest();
+		} else {
+			// code for IE6, IE5
+			xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+
+		xmlhttp.onreadystatechange = function() {
+			if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+				var text = xmlhttp.responseText;
+				var tags = JSON.parse(text);
+				var html = "";
+				for (var i = 0; i < tags.length; i++) {
+					html += '<input class="button1" type="button" value="'
+							+ tags[i] + '" onclick="getThumbs(\'' + tags[i]
+							+ '\')" />';
+				}
+				document.getElementById("tags").innerHTML = html;
+			}
+		}
+
+		xmlhttp.open("GET", "rest/gallery/tags", true);
+		xmlhttp.send();
+	}
+//-->	
+</script>
+</head>
+<body onload="getTags()">
+	
+		<h1>Galerija</h1>
+		
+		<p>Pristisnite gumb kako bi vidjeli slike...</p>
+		
+		<br>
+		<hr>
+		
+		<div align="center" id="tags">&nbsp;</div>
+		<div id="thumbnail">&nbsp;</div>
+		<div class="img2" align="center" id="picture">&nbsp;</div>
+		<div align="center" id="description">&nbsp;</div>
+		
+		
+	</body>
+</html>

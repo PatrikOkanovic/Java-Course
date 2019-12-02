@@ -1,0 +1,7 @@
+1	Prljavo Kazalište	https://www.youtube.com/watch?v=SlYOfpsOrEM
+2	Bijelo Dugme	https://www.youtube.com/watch?v=CAFE6UZ8DHk
+3	Parni Valjak	https://www.youtube.com/watch?v=rNC4Nlkk1S4
+4	Zabranjeno Pušenje	https://www.youtube.com/watch?v=Z6YjGldSD8A
+5	Psihomodo Pop	https://www.youtube.com/watch?v=UBqizmQrDwY
+6	Film	https://www.youtube.com/watch?v=hoK4Coq9aIs
+7	Hladno Pivo	https://www.youtube.com/watch?v=Lw8_dbZmLDE

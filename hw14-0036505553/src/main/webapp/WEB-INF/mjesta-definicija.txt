@@ -1,0 +1,7 @@
+Grbe	https://hr.wikipedia.org/wiki/Grbe_(Nin)
+Nin	https://www.nin.hr/
+Zadar	https://hr.wikipedia.org/wiki/Zadar
+Zagreb	https://hr.wikipedia.org/wiki/Zagreb
+Plitvička jezera	https://hr.wikipedia.org/wiki/Nacionalni_park_Plitvi%C4%8Dka_jezera
+Kornati	https://hr.wikipedia.org/wiki/Nacionalni_park_Kornati
+Brijuni	https://hr.wikipedia.org/wiki/Brijuni

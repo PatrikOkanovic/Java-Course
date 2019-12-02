@@ -1,0 +1,2 @@
+Glasanje za omiljeni bend:	Od sljedećih bendova, koji Vam je bend najdraži? Kliknite na link kako biste glasali!	/WEB-INF/pollOptions-definicija.txt
+Glasanje za omiljenu destinaciju:	Od sljedećih mjesta, koje Vam je najdraže? Kliknite na link kako biste glasali!	/WEB-INF/mjesta-definicija.txt
